@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Location">
+        <SwitchPreference
+            android:key="USE_DEVICE_LOCATION"
+            android:title="Use device location"
+            android:summary="Allow the app to use your geolocation"
+            android:defaultValue="true"
+            android:disableDependentsState="true"/>
+
+        <EditTextPreference
+            android:key="CUSTOM_LATITUDE"
+            android:title="Use a specific latitude coordinate"
+            android:summary="Select a specific latitude to display weather for"
+            android:defaultValue="40.7306"
+            android:dependency="USE_DEVICE_LOCATION"/>
+
+        <EditTextPreference
+            android:key="CUSTOM_LONGITUDE"
+            android:title="Use a specific longitude coordinate"
+            android:summary="Select a specific longitude to display weather for"
+            android:defaultValue="-73.9352"
+            android:dependency="USE_DEVICE_LOCATION"/>
+    </PreferenceCategory>
+</PreferenceScreen>
